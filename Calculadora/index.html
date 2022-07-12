@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container" name="container">
+        <div class="screen">
+         <input value="" readonly="readonly" type="text" class="output" id="output">
+    </div>
+    <div class="buttonGrid">
+         <input value="C" type="button" class="clear" id="clear">
+         <input value="(" type="button" class="operators key"> 
+         <input value=")" type="button" class="operators key">
+         <button class="delete" id="delete"><ion-icon name="backspace"></ion-icon></button>
+         <input value="7" type="button"type="button" class="num key">
+         <input value="8" type="button" class="num key"> 
+         <input value="9" type="button" class="num key">
+         <input value="/" type="button" class="operators key"> 
+         <input value="4" type="button" class="num key"> 
+         <input value="5" type="button" class="num key"> 
+         <input value="6" type="button" class="num key">
+         <input value="*" type="button" class="operators key"> 
+         <input value="1" type="button" class="num key"> 
+         <input value="2" type="button" class="num key"> 
+         <input value="3" type="button" class="num key">
+         <input value="+" type="button" class="operators key"> 
+         <input value="0" type="button" class="num key"> 
+         <input value="." type="button" class="num key"> 
+         <input value="00" type="button" class="num key">
+         <input value="-" type="button" class="operators key">
+         <input value="Ans" type="button" class="ans key">
+         <input value="=" type="button" class="equals" id="equals">
+         <input value="^" type="button" class="operators" id="exponencial">
+        
+        </div>
+
+</div>
+<div class="more" id="more">
+<div class="moreTable">
+    <button id="logButton">log(x)</button>
+    <button id="cosButton">cos(x)</button>
+    <button id="senButton">sen(x)</button>
+    <button id="raizButton">²√x</button>
+    <button id="factButton">x!</button>
+    <button id="piButton">π</button>
+    <button id="eButton">e</button>
+</div>
+<button class="moreButton" id="moreButton"><ion-icon name="arrow-dropright"></ion-icon></button>
+</div>
+<div class="copied" id="copied"><ion-icon name="clipboard"></ion-icon> Copiado al portapapeles</div>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="./Scripts/main.js"></script>
+</body>
+</html>

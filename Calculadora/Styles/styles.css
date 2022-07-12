@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    /* font-family:Bebas Neue; */
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+body{
+    background-color: rgb(31, 32, 32);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 26px;
+}
+
+
+
+.container{
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(31, 32, 32);
+}
+
+.container .screen{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .screen .output{
+    width: 100%;
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+    font-size: xx-large;
+    color: rgb(24, 24, 24);
+    font-weight: 700;
+    text-align: end;
+    padding: 30px 15px;
+    cursor:auto;
+    overflow-wrap: break-word;
+    -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.container .screen .output:hover{
+    filter: brightness(80%);
+}
+
+.container .screen .output:focus{
+    outline-style: none;
+}
+
+.container .buttonGrid{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .buttonGrid :is(input,button){
+    width: 75px;
+    height: 75px;
+    border-style: none;
+    transition: 0.1s;
+    color: antiquewhite;
+    cursor: pointer;
+    text-align: center;
+    font-size: x-large;
+}
+
+.container .buttonGrid :is(input,button):hover,.moreTable button:hover{
+    transform: scale(1.07);
+    filter: brightness(140%);
+    box-shadow: 0 0 3px black;
+}
+
+.container .buttonGrid :is(input,button):active,.moreTable button:active{
+    filter: brightness(50%);
+    transform: scale(0.9);
+}
+
+.num{
+    flex-grow: 1;
+    background-color: rgb(24, 24, 24);
+}
+
+.operators{
+    flex-grow: 0;
+    background-color: darkcyan;
+}
+
+.clear{
+    flex-grow: 1;
+    background-color: rgb(212, 16, 16);
+}
+
+.delete{
+    flex-grow: 1;
+    background-color: rgb(0, 61, 110);
+    text-align: center;
+    align-content: center;
+}
+
+.ans{
+    flex-grow: 0;
+    background-color: rgb(27, 158, 22);
+}
+
+.equals{
+    flex-grow: 1;
+    background-color: rgb(255, 123, 0);
+}
+
+.more{
+    display: flex;
+    position: absolute;
+    transition: 0.2s;
+    align-items: center;
+    left: 50%;
+    z-index: 0;
+    width: 200px;
+
+}
+
+.moreTable{
+    width: 150px;
+    height: 540px;
+    background-color: blueviolet;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.moreButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+    padding: 2px 4px;
+    width: 30px;
+    height: 50px;
+    background-color: blueviolet;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-size: larger;
+    border-style: none;
+    transition: 0.2s;
+
+}
+
+.moreButton:hover{
+    transform: translateX(5px);
+}
+
+.moreTable button{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: blueviolet;
+    border-style: none;
+    transition: 0.1s;
+    color: antiquewhite;
+    cursor: pointer;
+    text-align: center;
+    font-size: x-large;
+}
+
+.copied{
+    position: absolute;
+    z-index: 2;
+    font-size:13px;
+    color: antiquewhite;
+    background-color: rgba(0, 0, 0, 0.555);
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor:default;
+    display:none;
+    animation: hello 2s ease-in;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.visible{
+    display: block;
+}
+
+@keyframes hello {
+
+    0%{opacity: 0;}
+    5%{opacity: 1;}
+    95%{opacity: 1;}
+    100%{opacity: 0;}
+    
+}
+
+.copied ion-icon{
+    font-size: larger;
+    margin: auto 0;
+}
